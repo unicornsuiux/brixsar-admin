@@ -57,21 +57,70 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 
 
 $(document).ready(function() {
+  // Function to handle submenu toggle
   $('.th-sidebar-menu').each(function() {
-      var $submenu = $(this).find('.sidebar-submenu');
-      var $submenuBtn = $(this).find('.submenu-btn');
+    var $submenu = $(this).find('.sidebar-submenu');
+    var $submenuBtn = $(this).find('.submenu-btn');
 
-      $submenuBtn.click(function(e) {
-          e.preventDefault();
-          $(this).toggleClass('submenu-open');
-          $submenu.slideToggle();
-      });
+    $submenuBtn.click(function(e) {
+      e.preventDefault();
+      $(this).toggleClass('submenu-open');
+      $submenu.slideToggle();
+    });
+  });
+
+  // Function to toggle sidebar
+  $('.toggle-sidebar').click(function() {
+    $('.th-admin-wrapper').toggleClass('sidebar-close');
+
+    // Close open submenus when sidebar is toggled
+    $('.th-sidebar-menu .submenu-btn').removeClass('submenu-open');
+    $('.th-sidebar-menu .sidebar-submenu').slideUp();
   });
 });
 
 
+
 $(document).ready(function() {
-  $('.toggle-sidebar').click(function() {
-      $('.th-admin-wrapper').toggleClass('sidebar-close');
+  $(document).click(function(event) {
+    if (!$(event.target).closest('.employer_notification-dropdown, .employer_profile-dropdown').length) {
+      $('.profile-dropdown').hide();
+    }
+  });
+
+  $('#open_profile_notification').click(function() {
+    var profileDropdown = $('.employer_notification-dropdown .profile-dropdown');
+    var profileDropdownVisible = profileDropdown.is(':visible');
+    var profileDropdownOther = $('.employer_profile-dropdown .profile-dropdown');
+
+    if (profileDropdownVisible) {
+      profileDropdown.hide();
+    } else {
+      profileDropdown.show();
+      profileDropdownOther.hide();
+    }
+  });
+
+  $('#open_profile_dropdown').click(function() {
+    var profileDropdown = $('.employer_profile-dropdown .profile-dropdown');
+    var profileDropdownVisible = profileDropdown.is(':visible');
+    var profileDropdownOther = $('.employer_notification-dropdown .profile-dropdown');
+
+    if (profileDropdownVisible) {
+      profileDropdown.hide();
+    } else {
+      profileDropdown.show();
+      profileDropdownOther.hide();
+    }
+  });
+
+  // Close dropdown when the button is clicked again
+  $('#open_profile_notification, #open_profile_dropdown').click(function() {
+    var profileDropdown = $(this).siblings('.profile-dropdown');
+    var profileDropdownVisible = profileDropdown.is(':visible');
+
+    if (profileDropdownVisible) {
+      profileDropdown.hide();
+    }
   });
 });
