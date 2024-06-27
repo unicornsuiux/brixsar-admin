@@ -124,3 +124,78 @@ $(document).ready(function() {
     }
   });
 });
+
+
+
+// BAR CHART
+var options = {
+  series: [{
+  name: 'series1',
+  data: [31, 40, 28, 51, 42, 109, 100]
+}, {
+  name: 'series2',
+  data: [11, 32, 45, 32, 34, 52, 41]
+}],
+  chart: {
+  height: 350,
+  type: 'area'
+},
+dataLabels: {
+  enabled: false
+},
+stroke: {
+  curve: 'smooth'
+},
+xaxis: {
+  type: 'datetime',
+  categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+},
+tooltip: {
+  x: {
+    format: 'dd/MM/yy HH:mm'
+  },
+},
+};
+
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
+
+// DOUNT CHART
+var options = {
+  series: [44, 55, 41, 17, 15],
+  chart: {
+  width: 360,
+  type: 'donut',
+},
+plotOptions: {
+  pie: {
+    startAngle: -90,
+    endAngle: 270
+  }
+},
+dataLabels: {
+  enabled: false
+},
+fill: {
+  type: 'gradient',
+},
+legend: {
+  formatter: function(val, opts) {
+    return val + " - " + opts.w.globals.series[opts.seriesIndex]
+  }
+},
+responsive: [{
+  breakpoint: 1900,
+  options: {
+    chart: {
+      width: 320
+    },
+    legend: {
+      position: 'bottom'
+    }
+  }
+}]
+};
+
+var chart = new ApexCharts(document.querySelector("#dount"), options);
+chart.render();
