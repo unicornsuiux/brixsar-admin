@@ -22,31 +22,6 @@ $(document).ready(function () {
 
 
 
-// Gallery
-$(document).ready(function () {
-  lightGallery(document.getElementById("animated-thumbnails"), {
-    plugins: [lgZoom, lgThumbnail],
-    licenseKey: "your_license_key",
-    speed: 500,
-  });
-
-  //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
-  function autoPlayYouTubeModal() {
-    var trigger = $("body").find('[data-toggle="modal"]');
-    trigger.click(function () {
-      var theModal = $(this).data("target"),
-        videoSRC = $(this).attr("data-theVideo"),
-        videoSRCauto = videoSRC + "?autoplay=1";
-      $(theModal + " iframe").attr("src", videoSRCauto);
-      $(theModal + " button.close").click(function () {
-        $(theModal + " iframe").attr("src", videoSRC);
-      });
-    });
-  }
-
-  autoPlayYouTubeModal();
-});
-
 // Bootstrap tool tip
 var tooltipTriggerList = [].slice.call(
   document.querySelectorAll('[data-bs-toggle="tooltip"]')
@@ -137,7 +112,7 @@ var options = {
   data: [11, 32, 45, 32, 34, 52, 41]
 }],
   chart: {
-  height: 350,
+  height: 488,
   type: 'area'
 },
 dataLabels: {
@@ -199,3 +174,10 @@ responsive: [{
 
 var chart = new ApexCharts(document.querySelector("#dount"), options);
 chart.render();
+
+
+// Data table
+$(document).ready(function() {
+    $('#datatable-1').dataTable();
+  } 
+);

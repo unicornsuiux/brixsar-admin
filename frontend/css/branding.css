@@ -3410,3 +3410,236 @@ body::-webkit-scrollbar-thumb {
 .sec-vw {
   min-height: 100vh;
 }
+
+/* Heading font Size */
+/*================ SECTION HEADING RESPONSIVENESS ================*/
+.th-sec-title {
+  font-size: 55px;
+}
+.th-sec-title-md {
+  color: var(--th-bg-black);
+  font-weight: 700;
+  line-height: 1.3;
+  font-size: 40px;
+}
+.th-sec-title-md-25 {
+  font-size: 25px;
+  line-height: 1.4;
+  color: var(--th-bg-black);
+  font-weight: 700;
+}
+.th-sec-title-md-30 {
+  font-size: 30px;
+  color: var(--th-bg-black);
+  font-weight: 700;
+}
+.th-heading-sm {
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--th-bg-black);
+}
+.th-heading-sm-bold {
+  display: block;
+  font-size: 1.25em;
+  font-weight: var(--th-fw-700);
+  margin-top: 0px;
+  margin-bottom: 0;
+  text-transform: none;
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+  .th-sec-title {
+    font-size: 55px;
+  }
+  .th-sec-title-md {
+    font-size: 40px;
+  }
+  .th-sec-title-md-25 {
+    font-size: 25px;
+    line-height: 1.4;
+  }
+  .th-sec-title-md-30 {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .th-sec-title {
+    font-size: 45px;
+  }
+  .th-sec-title-md-25 {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+  .th-sec-title-md-30 {
+    font-size: 25px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .th-sec-title {
+    font-size: 40px;
+  }
+  .th-sec-title-md {
+    font-size: 35px;
+  }
+  .th-sec-title-md-25 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  .th-sec-title-md-30 {
+    font-size: 22px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .th-sec-title {
+    font-size: 45px;
+  }
+  .th-sec-title-md {
+    font-size: 30px;
+  }
+  .th-sec-title-md-25 {
+    font-size: 19px;
+    line-height: 1.4;
+  }
+  .th-sec-title-md-30 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .th-sec-title {
+    font-size: 30px;
+    padding-bottom: 5px;
+  }
+  .th-sec-title-md {
+    font-size: 25px;
+  }
+  .th-sec-title-md-30 {
+    font-size: 18px;
+  }
+  .th-sec-title-md-25 {
+    font-size: 18px;
+  }
+}
+
+/* FONT SIZE CLASS */
+.fs_10 {
+  font-size: var(--th-font10);
+}
+.fs-14 {
+  font-weight: 700 !important;
+  font-size: var(--th-font14);
+}
+.fs_14 {
+  font-size: var(--th-font14);
+}
+.fs-15 {
+  font-size: var(--th-font15) !important;
+  font-weight: 400;
+  color: #181a20;
+}
+.fs-16 {
+  font-size: var(--th-font16) !important;
+}
+.fs-18 {
+  font-size: var(--th-font18) !important;
+}
+.fs-20 {
+  font-size: var(--th-font20) !important;
+}
+@media only screen and (max-width: 600px) {
+  .fs-18 {
+    font-size: var(--th-font16) !important;
+  }
+  .fs-20 {
+    font-size: var(--th-font18) !important;
+  }
+}
+.text-thin {
+  letter-spacing: 3.2px;
+  font-size: 16px;
+  font-weight: 600;
+}
+/* FONT WEIGHT CLASS */
+.fw-normal {
+  font-weight: var(--th-fw-normal);
+}
+.fw-200 {
+  font-weight: var(--th-fw-200);
+}
+.fw-300 {
+  font-weight: var(--th-fw-300);
+}
+.fw-400 {
+  font-weight: var(--th-fw-400);
+}
+.fw-500 {
+  font-weight: var(--th-fw-500);
+}
+.fw-600 {
+  font-weight: var(--th-fw-600);
+}
+.fw-700 {
+  font-weight: var(--th-fw-700);
+}
+.fw-800 {
+  font-weight: var(--th-fw-800);
+}
+.fw-900 {
+  font-weight: var(--th-fw-900);
+}
+
+
+/* DATA TABLE */
+.dt-container{
+  margin-top: 30px;
+}
+div.dt-container div.dt-layout-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dt-length{
+  display: flex;
+  gap: 10px;
+  flex-direction: row-reverse;
+}
+.dt-length label{
+  text-transform: capitalize;
+}
+.dt-search{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.dt-column-title{
+  font-size: 14px;
+  color: rgba(51, 52, 72, .5);
+}
+table.dataTable > thead > tr > th, table.dataTable > thead > tr > td{
+  border: 0 !important;
+}
+table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTable.order-column.stripe > tbody > tr:nth-child(odd) > .sorting_1{
+  box-shadow: none !important;
+}
+table.dataTable > tbody > tr > th, table.dataTable > tbody > tr > td{
+  font-size: 13px;
+}
+div.dt-container .dt-paging .dt-paging-button.current, 
+div.dt-container .dt-paging .dt-paging-button.current:hover{
+  border-radius: 50%;
+  background-color: #f4f4f4;
+  border-color:transparent;
+
+}
+div.dt-container .dt-paging .dt-paging-button.current:hover{
+  color: #fff !important;
+}
+div.dt-container .dt-paging .dt-paging-button{
+  border-radius: 50%;
+}
+div.dt-container .dt-paging .dt-paging-button:hover{
+  background: var(--th-primary-color) !important;
+  color: #fff !important;
+  border-color: var(--th-primary-color);
+}

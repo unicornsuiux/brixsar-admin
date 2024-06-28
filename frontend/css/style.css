@@ -12,12 +12,7 @@
   background-color: #fff;
   height: 100%;
   position: fixed;
-  top: 0;
-  -webkit-box-shadow: -5px 0 20px -5px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: -5px 0 20px -5px rgba(0, 0, 0, 0.5);
-  -ms-box-shadow: -5px 0 20px -5px rgba(0, 0, 0, 0.5);
-  -o-box-shadow: -5px 0 20px -5px rgba(0, 0, 0, 0.5);
-  box-shadow: -5px 0 20px -5px rgba(0, 0, 0, 0.5);
+  top: 0;   
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -65,7 +60,7 @@
 .th-admin-brand-logo p{
   font-size: 20px;
   font-weight: 600;
-  color: var(--th-sidebar-text-hover);
+  color: var(--th-primary-color);
 }
 .th-admin-menu{
   list-style: none;
@@ -102,7 +97,7 @@
 }
 .th-meunu-link:hover span,
 .th-meunu-link:hover i{
-  color: var(--th-sidebar-text-hover);
+  color: var(--th-primary-color);
 }
 .arrow-btn{
   margin-left: auto;
@@ -143,7 +138,7 @@
   gap: 5px;
 }
 .menu-block h5{
-  color: var(--th-sidebar-text-hover);
+  color: var(--th-primary-color);
   text-transform: uppercase;
   font-weight: 600;
   font-size: 17px;
@@ -355,17 +350,18 @@
 }
 .th-admin-block{
   background-color: #fff;
-  border-radius: var(--th-radius-15);
+  border-radius: var(--th-radius-10);
   padding: 20px 12px 20px 15px;
   transition: all .3s ease;
 }
 .th-admin-block h5{
   font-size: 16px;
+  margin-top: 15px;
 }
 .th-admin-block h3{
-  font-size: 23px;
+  font-size: 25px;
   font-weight: 700;
-  margin: 20px 0;
+  margin: 20px 0px 0 0;
 }
 .th-admin-block p{
   font-size: 12px;
@@ -382,7 +378,6 @@
   transition: all 0.2s ease-in-out;
   overflow: hidden;
 }
-
 .property-card-imag-item {
   width: 100%;
   height: 200px;
@@ -445,4 +440,51 @@
 }
 .spec-item span {
   display: block;
+}
+/*=========== Welcome Bar ===========*/
+.welcome-block{
+  background: #fff;
+  border-radius: var(--th-radius-10);
+  position: relative;
+  z-index: 9;
+}
+.welcome-block:before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/bg-img-01.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.morning-img img {
+  position: absolute;
+  bottom: 0;
+}
+.morning-user {
+  padding: 50px 0 50px 35px;
+}
+/*========== Icon Wrap ============ */
+.icon-wrap {
+  border: 1px solid var(--th-primary-color);
+  border-radius: var(--th-radius-10);
+  color: var(--th-primary-color);
+  border: 1px solid var(--th-primary-color);
+  display: block;
+  font-size: 20px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  width: 50px;
+  transition: all 0.3s ease;
+}
+.icon-wrap i {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--th-primary-color);
+
 }
