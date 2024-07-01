@@ -31,17 +31,48 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 });
 
 
-$(document).ready(function() {
-  // Function to handle submenu toggle
-  $('.th-sidebar-menu').each(function() {
-    var $submenu = $(this).find('.sidebar-submenu');
-    var $submenuBtn = $(this).find('.submenu-btn');
+// $(document).ready(function() {
+//   // Function to handle submenu toggle
+//   $('.th-sidebar-menu').each(function() {
+//     var $submenu = $(this).find('.sidebar-submenu');
+//     var $submenuBtn = $(this).find('.submenu-btn');
 
-    $submenuBtn.click(function(e) {
-      e.preventDefault();
-      $(this).toggleClass('submenu-open');
-      $submenu.slideToggle();
-    });
+//     $submenuBtn.click(function(e) {
+//       e.preventDefault();
+//       $(this).toggleClass('submenu-open');
+//       $submenu.slideToggle();
+//     });
+//   });
+
+//   // Function to toggle sidebar
+//   $('.toggle-sidebar').click(function() {
+//     $('.th-admin-wrapper').toggleClass('sidebar-close');
+
+//     // Close open submenus when sidebar is toggled
+//     $('.th-sidebar-menu .submenu-btn').removeClass('submenu-open');
+//     $('.th-sidebar-menu .sidebar-submenu').slideUp();
+//   });
+// });
+$(document).ready(function() {
+  // Function to handle level-1 submenu toggle
+  $('.th-sidebar-menu > .th-meunu-link').click(function(e) {
+    e.preventDefault();
+    $(this).toggleClass('submenu-open');
+    $(this).next('.sidebar-submenu').slideToggle();
+  });
+
+  // Function to handle level-2 submenu toggle
+  $('.sidebar-submenu > li > .th-meunu-link.submenu-level-2-btn').click(function(e) {
+    e.preventDefault();
+    $(this).toggleClass('submenu-open');
+    $(this).next('.sidebar-submenu-level-2').slideToggle();
+  });
+
+  // Function to handle level-3 submenu toggle
+  $('.sidebar-submenu-level-2 > li > .th-meunu-link.submenu-level-3-btn').click(function(e) {
+    e.preventDefault();
+    $(this).toggleClass('submenu-open');
+    $(this).next('.sidebar-submenu-level-3').slideToggle();
   });
 
   // Function to toggle sidebar
@@ -49,10 +80,27 @@ $(document).ready(function() {
     $('.th-admin-wrapper').toggleClass('sidebar-close');
 
     // Close open submenus when sidebar is toggled
-    $('.th-sidebar-menu .submenu-btn').removeClass('submenu-open');
+    $('.th-sidebar-menu .th-meunu-link').removeClass('submenu-open');
     $('.th-sidebar-menu .sidebar-submenu').slideUp();
+
+    // Close open level-2 submenus when sidebar is toggled
+    $('.th-sidebar-menu .th-meunu-link.submenu-level-2-btn').removeClass('submenu-open');
+    $('.th-sidebar-menu .sidebar-submenu-level-2').slideUp();
+
+    // Close open level-3 submenus when sidebar is toggled
+    $('.th-sidebar-menu .th-meunu-link.submenu-level-3-btn').removeClass('submenu-open');
+    $('.th-sidebar-menu .sidebar-submenu-level-3').slideUp();
   });
 });
+
+
+
+
+
+
+
+
+
 
 
 

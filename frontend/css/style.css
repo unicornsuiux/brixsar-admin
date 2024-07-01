@@ -69,7 +69,7 @@
 }
 .th-meunu-link{
   border-radius: .375rem;
-  padding: .625rem 15px;
+  padding: .625rem 12px;
   background-color:transparent;
   display: flex;
   align-items: center;
@@ -106,10 +106,10 @@
   font-size: 13px;
   text-align: right;
 }
-.sidebar-submenu{
+.submenu-dropdown{
   position: relative;
 }
-.sidebar-submenu:after{
+.submenu-dropdown:after{
   content: "";
   height: 92%;
   width: 1px;
@@ -119,21 +119,23 @@
   top: 50%;
   transform: translateY(-50%);
 }
-.sidebar-submenu li{
+.submenu-dropdown li{
   list-style: none;
 }
-.sidebar-submenu{
+.sidebar-submenu,
+.sidebar-submenu-level-2,
+.sidebar-submenu-level-3{
   padding-left: 27px;
   display: none;
 }
-.sidebar-submenu .th-meunu-link span{
+.submenu-dropdown .th-meunu-link span{
   font-size: 14px;
   position: unset;
 }
-.sidebar-submenu .th-meunu-link i{
+.submenu-dropdown .th-meunu-link i{
   font-size: 10px;
 }
-.sidebar-submenu .th-meunu-link{
+.submenu-dropdown .th-meunu-link{
   padding: .425rem 12px;
   gap: 5px;
 }
@@ -487,4 +489,72 @@
   height: 100%;
   color: var(--th-primary-color);
 
+}
+/* ========= Custome Badge ========= */
+.badge{
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 12px;
+  min-width: 115px;
+  padding: 10px 15px;
+  text-align: center;
+  border: 0;
+  color: #fff;
+}
+.bg-orange{
+  background-color: orange;
+}
+.bg-blue{
+  background-color: blueviolet;
+}
+.bg-yellow{
+  background-color: yellow;
+  color: #000;
+}
+.bg-red{
+  background-color: red;
+}
+.bg-gray{
+  background-color: #c4c4c4;
+  color: #000;
+}
+.bg-primary{
+  background-color: var(--th-primary-color);
+}
+
+/*========= Action Dropdown ========= */
+.action-dropdown-wrap{
+  position: relative;
+}
+.action-dropdown-wrap i{
+  width:30px;
+  height: 20px;
+  background-color: #3b4cb81a;
+  text-align: center;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  font-size: 20px;
+  cursor: pointer;
+}
+.action-dropdown{
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fff;
+  border: 0;
+  border-radius: .75rem;
+  box-shadow: 0 0 3.125rem 0 #523f6926;
+  font-size: inherit;
+  margin-top: 0;
+  overflow: hidden;
+  z-index: 99;
+  width: 100%;
+  padding: 12px 12px;
+  text-align: left;
+}
+.action-dropdown li{
+  list-style: none;
 }
