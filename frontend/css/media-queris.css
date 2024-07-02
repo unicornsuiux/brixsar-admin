@@ -1,0 +1,71 @@
+/* ========== Sidebar Desktop ===========*/
+@media only screen and (min-width:1400px){
+    .th-admin-wrapper.sidebar-close .th-admin-sidebar{
+        width: 78px;
+    }
+    .th-admin-wrapper.sidebar-close .th-admin-sidebar .th-meunu-link span,
+    .th-admin-wrapper.sidebar-close .th-admin-sidebar .th-meunu-link .arrow-btn,
+    .th-admin-wrapper.sidebar-close .th-admin-sidebar .th-admin-brand-logo p{
+        opacity: 0;
+        visibility: hidden;
+    }
+    .th-admin-wrapper.sidebar-close .menu-block h5{
+        display: none;
+    }
+    .th-admin-wrapper.sidebar-close .th-admin-content{
+        width: calc(100% - 78px);
+    }
+}
+/* ========== Sidebar Mobile  ===========*/
+@media only screen and (max-width:1500px){
+    .th-admin-block{
+        min-height: 230px;
+    }
+}
+@media only screen and (max-width:1400px){
+    .th-admin-wrapper.sidebar-close .th-admin-sidebar{
+        left: -100%;
+        transition: all .3s ease;
+    }
+    .th-admin-wrapper.sidebar-close .th-admin-content{
+        width: 100%;
+    }
+} 
+@media only screen and (max-width:1200px){
+    .dashboard-write-content{
+        display: flex;
+        gap: 10px;
+    }
+    .dashboard-write-content>div{
+        width: 50%;
+    }
+}
+@media only screen and (max-width:1100px){
+    .th-admin-wrapper .th-admin-content{
+        width: 100%;
+    }
+    .th-admin-sidebar{
+        left: -100%;
+    }
+}
+@media only screen and (max-width:768px){
+    .dashboard-write-content{
+        flex-direction: column;
+    }
+    .dashboard-write-content>div{
+        width: 100%;
+    }
+    .morning-img img{
+        right: 0;
+        width: 226px;
+        z-index: -1;
+    }
+}
+@media only screen and (max-width:575px){
+    .facilities-wrap{
+        flex-direction: column;
+    }
+    .facilities-item-wrap{
+        width: 100%;
+    }
+}

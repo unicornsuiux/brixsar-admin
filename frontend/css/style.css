@@ -149,21 +149,6 @@
   white-space: nowrap;
 
 }
-.th-admin-wrapper.sidebar-close .th-admin-sidebar{
-  width: 78px;
-}
-.th-admin-wrapper.sidebar-close .th-admin-sidebar .th-meunu-link span,
-.th-admin-wrapper.sidebar-close .th-admin-sidebar .th-meunu-link .arrow-btn,
-.th-admin-wrapper.sidebar-close .th-admin-sidebar .th-admin-brand-logo p{
-  opacity: 0;
-  visibility: hidden;
-}
-.th-admin-wrapper.sidebar-close .menu-block h5{
-  display: none;
-}
-.th-admin-wrapper.sidebar-close .th-admin-content{
-  width: calc(100% - 78px);
-}
 
 /* =============== Admin Header ============= */
 .th-admin-header{
@@ -463,6 +448,7 @@
 .morning-img img {
   position: absolute;
   bottom: 0;
+  right: 100px;
 }
 .morning-user {
   padding: 50px 0 50px 35px;
@@ -492,30 +478,30 @@
 }
 /* ========= Custome Badge ========= */
 .badge{
-  border-radius: 8px;
+  border-radius: 17px;
   display: inline-block;
   font-size: 12px;
-  min-width: 115px;
-  padding: 10px 15px;
+  min-width: 74px;
+  padding: 10px 13px;
   text-align: center;
   border: 0;
   color: #fff;
 }
 .bg-orange{
-  background-color: orange;
+  background-color: rgba(255, 166, 0, 0.634);
 }
 .bg-blue{
-  background-color: blueviolet;
+  background-color: rgba(137, 43, 226, 0.619);
 }
 .bg-yellow{
-  background-color: yellow;
+  background-color: rgba(255, 255, 0, 0.637);
   color: #000;
 }
 .bg-red{
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.615);
 }
 .bg-gray{
-  background-color: #c4c4c4;
+  background-color: rgba(196, 196, 196, 0.54);
   color: #000;
 }
 .bg-primary{
@@ -540,9 +526,13 @@
   cursor: pointer;
 }
 .action-dropdown{
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s all linear;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   position: absolute;
   left: 0;
-  top: 0;
+  top: 24px;
   background: #fff;
   border: 0;
   border-radius: .75rem;
@@ -554,7 +544,56 @@
   width: 100%;
   padding: 12px 12px;
   text-align: left;
+  transform-origin: 0 0;
+  transform: scale(0);
+}
+.action-dropdown.active {
+  visibility: visible;
+  opacity: 1;
+  transform-origin: 100% 0px;
+  transform: scaleX(1) scaleY(1);
 }
 .action-dropdown li{
   list-style: none;
+  padding: 3px 5px;
+}
+.action-dropdown li a{
+  display: block;
+}
+.action-dropdown li:hover{
+  background-color: #f4f4f4;
+  border-radius: 4px;
+}
+
+/*=========== th-box ==============*/
+.th-box{
+  background-color: #fff;
+  padding: 20px; 
+  border-radius: var(--th-radius-10);
+}
+
+/* Checkbox Wrap */
+.feature-inner-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.feature-inner-wrap label{
+  font-weight: 400 !important;
+  font-size: 13px !important;
+}
+.facilities-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.facilities-item-wrap{
+  width: calc(50% - 10px);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+.facilities-item-wrap input{
+  width: 150px;
 }

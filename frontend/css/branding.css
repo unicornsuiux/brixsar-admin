@@ -233,12 +233,13 @@ input:focus {
   box-shadow: none;
 }
 .form-check input[type="checkbox"] {
-  height: 17px !important;
-  border: 1px solid var(--th-primary-color) !important;
-  border-bottom: 1px solid var(--th-primary-color) !important;
-  border-radius: 0 !important;
+  height: 19px !important;
+  width: 19px !important;
+  border: 1px solid #ddd !important;
+  border-bottom: 1px solid #ddd !important;
+  border-radius: 2px !important;
   position: relative;
-  left: -3px;
+  left: 0px;
   padding: 0;
 }
 .form-check-input:checked {
@@ -259,22 +260,27 @@ label {
   font-size: 14px !important;
   font-family: var(--th-heading-family);
 }
-.form-control {
-  border-radius: 8px;
+.form-control,
+.form-select {
+  border-radius: var(--th-radius-10);
   border: 1px solid #ddd;
   box-shadow: none;
   font-size: var(--th-font14);
-  height: 55px;
+  height: 45px;
   outline: none;
   padding-left: 15px;
 }
-.form-control:focus {
+.form-control:focus,
+.form-select:focus {
   box-shadow: none;
   outline: 1px solid var(--th-primary-color);
 }
 textarea.form-control {
   height: 80px;
   height: 80px;
+}
+.form-control::placeholder{
+  font-size: 13px;
 }
 .input-group-text {
   width: 80px;
@@ -3623,7 +3629,9 @@ table.dataTable.display > tbody > tr:nth-child(odd) > .sorting_1, table.dataTabl
   box-shadow: none !important;
 }
 table.dataTable > tbody > tr > th, table.dataTable > tbody > tr > td{
-  font-size: 13px;
+  font-size: 14px;
+  color: #000;
+  font-weight: 500;
 }
 div.dt-container .dt-paging .dt-paging-button.current, 
 div.dt-container .dt-paging .dt-paging-button.current:hover{
@@ -3642,4 +3650,19 @@ div.dt-container .dt-paging .dt-paging-button:hover{
   background: var(--th-primary-color) !important;
   color: #fff !important;
   border-color: var(--th-primary-color);
+}
+.img-td{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.img-td img{ 
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.table td,
+.table td p{
+  color: #000;
 }
