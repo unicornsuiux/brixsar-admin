@@ -1,3 +1,19 @@
+FilePond.registerPlugin(    
+  // encodes the file as base64 data
+  FilePondPluginFileEncode,
+  // validates the size of the file
+  FilePondPluginFileValidateSize,
+  // corrects mobile image orientation
+  FilePondPluginImageExifOrientation,
+  // previews dropped images
+  FilePondPluginImagePreview
+);
+
+// Select all file inputs with the class 'filepond' and turn them into ponds
+document.querySelectorAll('input.filepond').forEach(inputElement => {
+  FilePond.create(inputElement);
+});
+
 // HEADER SHIFT
 $(document).ready(function () {
   var lastScroll = 5;
@@ -16,8 +32,6 @@ $(document).ready(function () {
     });
   });
 });
-
-
 
 // Bootstrap tool tip
 var tooltipTriggerList = [].slice.call(
@@ -67,17 +81,6 @@ $(document).ready(function() {
     $('.th-sidebar-menu .sidebar-submenu-level-3').slideUp();
   });
 });
-
-
-
-
-
-
-
-
-
-
-
 
 $(document).ready(function() {
   $(document).click(function(event) {
@@ -162,7 +165,6 @@ var options = {
     }
   }]
 };
-
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
 
@@ -263,7 +265,6 @@ $(document).ready(function() {
     );
   } 
 );
-
 
 // action Dropdown
 $(document).ready(function() {

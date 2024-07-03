@@ -32,7 +32,7 @@
   --th-label-color: #181a20;
   --th-font-color: #181a20;
   --th-body-color: #000;
-  --th-sidebar-text: #333548bf;
+  --th-sidebar-text: #000;
   --th-sidebar-text-hover: #2e37a4;
   --th-color-2: #222121;
   --th-color-3: #ff577b;
@@ -505,11 +505,11 @@ body::-webkit-scrollbar-thumb {
   z-index: 1;
   text-align: center;
   text-decoration: none;
-  font-size: var(--th-font16);
+  font-size: var(--th-font15);
   font-weight: var(--th-fw-500);
   color: var(--th-bc-light);
   padding: 0px 20px;
-  height: 47.5px;
+  height: 40px;
   width: max-content;
   display: flex;
   align-items: center;
@@ -523,25 +523,12 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
   cursor: pointer;
 }
-.th-btn::before {
-  background-color: var(--th-bc-dark);
-  content: "";
-  height: 102%;
-  left: -100%;
-  position: absolute;
-  top: 0;
-  width: 0;
-  z-index: -1;
-  transform: skew(50deg);
-  transition: width 0.6s;
-  transform-origin: top left;
-}
 .th-btn:hover {
   color: var(--th-bg-white);
+  opacity: 0.7;
 }
-.th-btn:hover::before {
-  height: 102%;
-  width: 200%;
+.th-btn.th-btn-danger{
+  background-color: #f74141;
 }
 /* TH-BTNS SIZES */
 .th-btn.md {
@@ -589,10 +576,10 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   text-decoration: none;
   font-size: var(--th-font16);
-  font-weight: var(--th-fw-700);
+  font-weight: var(--th-fw-500);
   color: var(--th-primary-color);
   padding: 0px 20px;
-  height: 48px;
+  height: 40px;
   width: max-content;
   display: flex;
   align-items: center;
@@ -634,7 +621,8 @@ body::-webkit-scrollbar-thumb {
 .btn_group {
   display: flex;
   align-items: center;
-  gap: 11px;
+  justify-content: end;
+  gap: 10px;
 }
 /* TH-ANIMATED BTN */
 .th-animated-btn {
@@ -793,12 +781,14 @@ body::-webkit-scrollbar-thumb {
 }
 .th-btn.btn-4 {
   background-color: var(--th-color-4);
+  color: #333;
 }
 .th-btn.btn-5 {
   background-color: var(--th-color-5);
 }
 .th-btn.btn-6 {
   background-color: var(--th-color-6);
+  color: #333;
 }
 .th-btn.btn-7 {
   background-color: var(--th-color-7);
@@ -812,37 +802,7 @@ body::-webkit-scrollbar-thumb {
 .th-btn.btn-10 {
   background-color: var(--th-color-10);
 }
-/* th-btn-hovers */
-.th-btn.btn-1:hover {
-  background-color: var(--th-color-1);
-}
-.th-btn.btn-2:hover {
-  background-color: var(--th-color-2);
-}
-.th-btn.btn-3:hover {
-  background-color: var(--th-color-3);
-}
-.th-btn.btn-4:hover {
-  background-color: var(--th-color-4);
-}
-.th-btn.btn-5:hover {
-  background-color: var(--th-color-5);
-}
-.th-btn.btn-6:hover {
-  background-color: var(--th-color-6);
-}
-.th-btn.btn-7:hover {
-  background-color: var(--th-color-7);
-}
-.th-btn.btn-8:hover {
-  background-color: var(--th-color-8);
-}
-.th-btn.btn-9:hover {
-  background-color: var(--th-color-9);
-}
-.th-btn.btn-10:hover {
-  background-color: var(--th-color-10);
-}
+
 
 /*================ Background Color ================*/
 
@@ -3376,6 +3336,9 @@ body::-webkit-scrollbar-thumb {
   list-style: none;
   padding: 0;
   height: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: var(--th-radius-10);
 }
 .breads li {
   position: relative;
@@ -3609,6 +3572,7 @@ div.dt-container div.dt-layout-row{
   display: flex;
   gap: 10px;
   flex-direction: row-reverse;
+  align-items: center;
 }
 .dt-length label{
   text-transform: capitalize;
@@ -3665,4 +3629,41 @@ div.dt-container .dt-paging .dt-paging-button:hover{
 .table td,
 .table td p{
   color: #000;
+}
+
+
+/**
+ * FilePond Custom Styles
+ */
+ .filepond--drop-label {
+	color: #4c4e53;
+}
+
+.filepond--label-action {
+	text-decoration-color: #babdc0;
+}
+
+.filepond--panel-root {
+	border-radius: 2em;
+	background-color: #edf0f4;
+	height: 1em;
+}
+
+.filepond--item-panel {
+	background-color: #595e68;
+}
+
+.filepond--drip-blob {
+	background-color: #7f8a9a;
+}
+
+div.dt-container .dt-search input,
+div.dt-container select.dt-input{
+  border-radius: var(--th-radius-10);
+  border: 1px solid #ddd;
+  box-shadow: none;
+  font-size: var(--th-font14);
+  height: 45px;
+  outline: none;
+  padding-left: 15px;
 }

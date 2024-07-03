@@ -9,6 +9,8 @@ document.write('<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select
 document.write('<link rel="stylesheet" href="./frontend/css/font-awesome-pro.css" />');
 document.write('<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">');
 document.write('<link href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" rel="stylesheet">');
+document.write('<link rel="stylesheet" href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css">');
+document.write('<link rel="stylesheet" href="https://unpkg.com/filepond/dist/filepond.min.css">');
 document.write('<link rel="stylesheet" href="./frontend/css/style.css">');
 document.write('<link rel="stylesheet" href="./frontend/css/media-queris.css">')
 

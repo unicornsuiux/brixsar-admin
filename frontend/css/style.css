@@ -161,7 +161,7 @@
   background-color: #fff;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: end;
   padding: 17px 10px 17px 14px;
   border-radius: 0px;
 }
@@ -486,11 +486,12 @@
   text-align: center;
   border: 0;
   color: #fff;
+  background-color: var(--th-primary-color);
 }
 .bg-orange{
   background-color: rgba(255, 166, 0, 0.634);
 }
-.bg-blue{
+.bg-orange{
   background-color: rgba(137, 43, 226, 0.619);
 }
 .bg-yellow{
@@ -568,9 +569,18 @@
 /*=========== th-box ==============*/
 .th-box{
   background-color: #fff;
-  padding: 20px; 
   border-radius: var(--th-radius-10);
 }
+.th-box-header{
+  background-color: var(--th-primary-color);
+  padding: 15px 20px; 
+  border-radius: var(--th-radius-10) var(--th-radius-10) 0 0;
+}
+.th-box-content{
+  border-radius: 0px 0px var(--th-radius-10) var(--th-radius-10);
+  padding: 20px; 
+}
+
 
 /* Checkbox Wrap */
 .feature-inner-wrap{

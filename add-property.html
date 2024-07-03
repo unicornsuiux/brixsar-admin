@@ -17,8 +17,7 @@
     <meta name="twitter:image" content="./frontend/img/thumbnail.webp">
     <meta property="og:url" content="">
     </meta>
-    <script language=javascript src="./frontend/js-cynosure/top.js"></script>
-
+    <script language=javascript src="./frontend/js-cynosure/top.js"></script>    
 </head>
 
 <body>
@@ -31,7 +30,7 @@
                 </div>
                 <ul class="th-admin-menu ps-3 pe-2 pt-4 pb-5">
                     <li class="th-sidebar-menu">
-                        <a href="" class="th-meunu-link">
+                        <a href="./index.html" class="th-meunu-link">
                             <i class="fa-solid fa-house-chimney"></i>
                             <span>Dashboard</span>
                         </a>
@@ -62,7 +61,7 @@
                                 <li class="th-sidebar-menu">
                                     <a href="#" class="th-meunu-link">
                                       <i class="fa-regular fa-circle"></i>
-                                      <span>Property Detail</span>
+                                      <span>Property Enquiry</span>
                                     </a>
                                 </li>
                             </ul>  
@@ -219,17 +218,6 @@
             <div class="th-admin-content">
                 <div class="th-admin-header">
                     <div class="th-admin-header-inner">
-                        <ul class="breads">
-                            <li>
-                                <a href="">Dashboard</a>
-                            </li>
-                            <li>
-                                <a href="">Pages</a>
-                            </li>
-                            <li class="current">
-                                Page 1
-                            </li>
-                        </ul>
                         <div class="th-header-actions">
                             <div class="employer_notification-dropdown" id="open_profile_notification">
                                 <button class="notification">
@@ -300,295 +288,340 @@
                 </div>
                 <div class="th-admin-content-inner">
                     <div class="container-fluid">
+                        <div class="row mb-4">
+                            <div class="col-lg-12">
+                                <ul class="breads">
+                                    <li>
+                                        <a href="">Dashboard</a>
+                                    </li>
+                                    <li>
+                                        <a href="">Sales</a>
+                                    </li>
+                                    <li class="current">
+                                        Add Property
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="th-box">
-                                    <h3 class="th-sec-title-md-25">Add Property</h3>
-                                    <form action="">
-                                        <div class="row">
-                                            <div class="col-lg-4 mb-3">
-                                                <label for="property-type" class="form-label">Property Type</label>
-                                                <input type="text" class="form-control" id="property-type">
-                                            </div>
-                                            <div class="col-lg-4 mb-3">
-                                                <label for="property-type" class="form-label">Property Status</label>
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Open this select menu</option>
-                                                    <option value="1">For Rent</option>
-                                                    <option value="2">For Sale</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-lg-4 mb-3">
-                                                <label for="property-type" class="form-label">Property Price</label>
-                                                <input type="number" class="form-control" id="property-type">
-                                            </div>
-                                            <div class="col-lg-4 mb-3">
-                                                <label for="property-type" class="form-label">Max Room</label>
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Open this select menu</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="2">3</option>
-                                                    <option value="2">4</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-lg-4 mb-3">
-                                                <label for="property-type" class="form-label">Max Room</label>
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Bed</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="2">3</option>
-                                                    <option value="2">4</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-lg-4 mb-3">
-                                                <label for="property-type" class="form-label">Max Room</label>
-                                                <select class="form-select" aria-label="Default select example">
-                                                    <option selected>Bath</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="2">3</option>
-                                                    <option value="2">4</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-lg-4 mb-3">
-                                                <label for="area" class="form-label">Area</label>
-                                                <input type="text" class="form-control" id="area" placeholder="85 sp ft">
-                                            </div>
-                                            <div class="col-lg-4 mb-3">
-                                                <label for="price" class="form-label">Price</label>
-                                                <input type="price" class="form-control" id="price" placeholder="$3000">
-                                            </div>
-                                            <div class="col-lg-12 mb-3">
-                                                <label for="description" class="form-label">Description</label>
-                                                <textarea class="form-control" id="description" rows="3"></textarea>
-                                            </div>
-                                            <div class="col-lg-3 mb-3">
-                                                <label for="address" class="form-label">Address</label>
-                                                <input type="text" class="form-control" id="address" placeholder="Address of your property">
-                                            </div>
-                                            <div class="col-lg-3 mb-3">
-                                                <label for="city" class="form-label">City</label>
-                                                <input type="text" class="form-control" id="city">
-                                            </div>
-                                            <div class="col-lg-3 mb-3">
-                                                <label for="country" class="form-label">Country</label>
-                                                <input type="text" class="form-control" id="country">
-                                            </div>
-                                            <div class="col-lg-3 mb-3">
-                                                <label for="zip" class="form-label">Zip Code</label>
-                                                <input type="number" class="form-control" id="zip" placeholder="Enter Code">
-                                            </div>
-                                            <div class="col-lg-12 mb-3">
-                                                <label for="map-url" class="form-label">Google Map URL</label>
-                                                <input type="url" class="form-control" id="map-url" placeholder="Enter Google Link">
-                                            </div>
-                                            <div class="col-lg-12 mb-3">
-                                                <label for="map-url" class="form-label">Additional features</label>
-                                                <div class="feature-inner-wrap">
-                                                    <div class="feature-checkbox">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="Air Conditioning" id="air-Conditioning">
-                                                            <label class="form-check-label" for="air-Conditioning">
-                                                                Air Conditioning
-                                                            </label>
-                                                        </div>
+                                    <div class="th-box-header">
+                                        <h3 class="th-sec-title-md-25 text-white mb-0">Add Property</h3>
+                                    </div>
+                                    <div class="th-box-content">
+                                        <form action="">
+                                            <div class="row">
+                                                <div class="col-lg-4 mb-3">
+                                                    <label for="property-type" class="form-label">Property Type</label>
+                                                    <input type="text" class="form-control" id="property-type">
+                                                </div>
+                                                <div class="col-lg-4 mb-3">
+                                                    <label for="property-type" class="form-label">Property Status</label>
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option selected>Open this select menu</option>
+                                                        <option value="1">For Rent</option>
+                                                        <option value="2">For Sale</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-4 mb-3">
+                                                    <label for="property-type" class="form-label">Property Price</label>
+                                                    <input type="number" class="form-control" id="property-type">
+                                                </div>
+                                                <div class="col-lg-4 mb-3">
+                                                    <label for="property-type" class="form-label">Max Room</label>
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option selected>Open this select menu</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="2">3</option>
+                                                        <option value="2">4</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-4 mb-3">
+                                                    <label for="property-type" class="form-label">Max Room</label>
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option selected>Bed</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="2">3</option>
+                                                        <option value="2">4</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-4 mb-3">
+                                                    <label for="property-type" class="form-label">Max Room</label>
+                                                    <select class="form-select" aria-label="Default select example">
+                                                        <option selected>Bath</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="2">3</option>
+                                                        <option value="2">4</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-4 mb-3">
+                                                    <label for="area" class="form-label">Area</label>
+                                                    <input type="text" class="form-control" id="area" placeholder="85 sp ft">
+                                                </div>
+                                                <div class="col-lg-4 mb-3">
+                                                    <label for="price" class="form-label">Price</label>
+                                                    <input type="price" class="form-control" id="price" placeholder="$3000">
+                                                </div>
+                                                <div class="col-lg-12 mb-3">
+                                                    <label for="description" class="form-label">Description</label>
+                                                    <textarea class="form-control" id="description" rows="3"></textarea>
+                                                </div>
+                                                <div class="col-lg-12 mb-3">
+                                                    <div class="position-relative">
+                                                        <label for="" class="form-label">Property Main Image</label>
+                                                        <input type="file" class="filepond" name="filepond" multiple data-max-file-size="3MB" data-max-files="1" />
                                                     </div>
-                                                    <div class="feature-checkbox">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="Barbeque" id="Barbeque">
-                                                            <label class="form-check-label" for="Barbeque">
-                                                                Barbeque
-                                                            </label>
-                                                        </div>
+                                                </div>
+                                                <div class="col-lg-12 mb-3">
+                                                    <div class="position-relative">
+                                                        <label for="" class="form-label">Property Other Images</label>
+                                                        <input type="file" class="filepond" name="filepond1" multiple data-max-file-size="3MB" data-max-files="10" />
                                                     </div>
-                                                    <div class="feature-checkbox">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="Dryer" id="Dryer">
-                                                            <label class="form-check-label" for="Dryer">
-                                                                Dryer
-                                                            </label>
+                                                </div>
+                                                <div class="col-lg-3 mb-3">
+                                                    <label for="address" class="form-label">Address</label>
+                                                    <input type="text" class="form-control" id="address" placeholder="Address of your property">
+                                                </div>
+                                                <div class="col-lg-3 mb-3">
+                                                    <label for="city" class="form-label">City</label>
+                                                    <input type="text" class="form-control" id="city">
+                                                </div>
+                                                <div class="col-lg-3 mb-3">
+                                                    <label for="country" class="form-label">Country</label>
+                                                    <input type="text" class="form-control" id="country">
+                                                </div>
+                                                <div class="col-lg-3 mb-3">
+                                                    <label for="zip" class="form-label">Zip Code</label>
+                                                    <input type="number" class="form-control" id="zip" placeholder="Enter Code">
+                                                </div>
+                                                <div class="col-lg-12 mb-3">
+                                                    <label for="map-url" class="form-label">Google Map URL</label>
+                                                    <input type="url" class="form-control" id="map-url" placeholder="Enter Google Link">
+                                                </div>
+                                                <div class="col-lg-12 mb-3">
+                                                    <label for="map-url" class="form-label">Additional features</label>
+                                                    <div class="feature-inner-wrap">
+                                                        <div class="feature-checkbox">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="Air Conditioning" id="air-Conditioning">
+                                                                <label class="form-check-label" for="air-Conditioning">
+                                                                    Air Conditioning
+                                                                </label>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="feature-checkbox">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="Gym" id="Gym">
-                                                            <label class="form-check-label" for="Gym">
-                                                                Gym
-                                                            </label>
+                                                        <div class="feature-checkbox">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="Barbeque" id="Barbeque">
+                                                                <label class="form-check-label" for="Barbeque">
+                                                                    Barbeque
+                                                                </label>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="feature-checkbox">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="Laundry" id="Laundry">
-                                                            <label class="form-check-label" for="Laundry">
-                                                                Laundry
-                                                            </label>
+                                                        <div class="feature-checkbox">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="Dryer" id="Dryer">
+                                                                <label class="form-check-label" for="Dryer">
+                                                                    Dryer
+                                                                </label>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="feature-checkbox">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="Lawn" id="Lawn">
-                                                            <label class="form-check-label" for="Lawn">
-                                                                Lawn
-                                                            </label>
+                                                        <div class="feature-checkbox">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="Gym" id="Gym">
+                                                                <label class="form-check-label" for="Gym">
+                                                                    Gym
+                                                                </label>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="feature-checkbox">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="Microwave" id="Microwave">
-                                                            <label class="form-check-label" for="Microwave">
-                                                                Microwave
-                                                            </label>
+                                                        <div class="feature-checkbox">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="Laundry" id="Laundry">
+                                                                <label class="form-check-label" for="Laundry">
+                                                                    Laundry
+                                                                </label>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="feature-checkbox">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="Outdoor Shower" id="Outdoor-Shower">
-                                                            <label class="form-check-label" for="Outdoor-Shower">
-                                                                Outdoor Shower
-                                                            </label>
+                                                        <div class="feature-checkbox">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="Lawn" id="Lawn">
+                                                                <label class="form-check-label" for="Lawn">
+                                                                    Lawn
+                                                                </label>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="feature-checkbox">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="Refrigerator" id="Refrigerator">
-                                                            <label class="form-check-label" for="Refrigerator">
-                                                                Refrigerator
-                                                            </label>
+                                                        <div class="feature-checkbox">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="Microwave" id="Microwave">
+                                                                <label class="form-check-label" for="Microwave">
+                                                                    Microwave
+                                                                </label>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="feature-checkbox">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="Sauna" id="Sauna">
-                                                            <label class="form-check-label" for="Sauna">
-                                                                Sauna
-                                                            </label>
+                                                        <div class="feature-checkbox">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="Outdoor Shower" id="Outdoor-Shower">
+                                                                <label class="form-check-label" for="Outdoor-Shower">
+                                                                    Outdoor Shower
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="feature-checkbox">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="Refrigerator" id="Refrigerator">
+                                                                <label class="form-check-label" for="Refrigerator">
+                                                                    Refrigerator
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="feature-checkbox">
+                                                            <div class="form-check">
+                                                                <input class="form-check-input" type="checkbox" value="Sauna" id="Sauna">
+                                                                <label class="form-check-label" for="Sauna">
+                                                                    Sauna
+                                                                </label>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-lg-12">
-                                                <label class="form-label">Facilities</label>
-                                                <div class="facilities-wrap">
-                                                    <div class="facilities-item-wrap">
-                                                        <div class="feature-checkbox">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value="Air Conditioning" id="air-Conditioning">
-                                                                <label class="form-check-label" for="air-Conditioning">
-                                                                    Hosiptal
-                                                                </label>
+                                                <div class="col-lg-12">
+                                                    <label class="form-label">Facilities</label>
+                                                    <div class="facilities-wrap">
+                                                        <div class="facilities-item-wrap">
+                                                            <div class="feature-checkbox">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="Air Conditioning" id="air-Conditioning">
+                                                                    <label class="form-check-label" for="air-Conditioning">
+                                                                        Hosiptal
+                                                                    </label>
+                                                                </div>
                                                             </div>
+                                                            <input type="text" class="form-control" placeholder="6.4 km">
                                                         </div>
-                                                        <input type="text" class="form-control" placeholder="6.4 km">
+                                                        <div class="facilities-item-wrap">
+                                                            <div class="feature-checkbox">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="Air Conditioning" id="air-Conditioning">
+                                                                    <label class="form-check-label" for="air-Conditioning">
+                                                                        Hosiptal
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <input type="text" class="form-control" placeholder="6.4 km">
+                                                        </div>
+                                                        <div class="facilities-item-wrap">
+                                                            <div class="feature-checkbox">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="Air Conditioning" id="air-Conditioning">
+                                                                    <label class="form-check-label" for="air-Conditioning">
+                                                                        Hosiptal
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <input type="text" class="form-control" placeholder="6.4 km">
+                                                        </div>
+                                                        <div class="facilities-item-wrap">
+                                                            <div class="feature-checkbox">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="Air Conditioning" id="air-Conditioning">
+                                                                    <label class="form-check-label" for="air-Conditioning">
+                                                                        Hosiptal
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <input type="text" class="form-control" placeholder="6.4 km">
+                                                        </div>
+                                                        <div class="facilities-item-wrap">
+                                                            <div class="feature-checkbox">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="Air Conditioning" id="air-Conditioning">
+                                                                    <label class="form-check-label" for="air-Conditioning">
+                                                                        Hosiptal
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <input type="text" class="form-control" placeholder="6.4 km">
+                                                        </div>
+                                                        <div class="facilities-item-wrap">
+                                                            <div class="feature-checkbox">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="Air Conditioning" id="air-Conditioning">
+                                                                    <label class="form-check-label" for="air-Conditioning">
+                                                                        Hosiptal
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <input type="text" class="form-control" placeholder="6.4 km">
+                                                        </div>
+                                                        <div class="facilities-item-wrap">
+                                                            <div class="feature-checkbox">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="Air Conditioning" id="air-Conditioning">
+                                                                    <label class="form-check-label" for="air-Conditioning">
+                                                                        Hosiptal
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <input type="text" class="form-control" placeholder="6.4 km">
+                                                        </div>
+                                                        <div class="facilities-item-wrap">
+                                                            <div class="feature-checkbox">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="Air Conditioning" id="air-Conditioning">
+                                                                    <label class="form-check-label" for="air-Conditioning">
+                                                                        Hosiptal
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <input type="text" class="form-control" placeholder="6.4 km">
+                                                        </div>
+                                                        <div class="facilities-item-wrap">
+                                                            <div class="feature-checkbox">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="Air Conditioning" id="air-Conditioning">
+                                                                    <label class="form-check-label" for="air-Conditioning">
+                                                                        Hosiptal
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <input type="text" class="form-control" placeholder="6.4 km">
+                                                        </div>
+                                                        <div class="facilities-item-wrap">
+                                                            <div class="feature-checkbox">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="Air Conditioning" id="air-Conditioning">
+                                                                    <label class="form-check-label" for="air-Conditioning">
+                                                                        Hosiptal
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <input type="text" class="form-control" placeholder="6.4 km">
+                                                        </div>
                                                     </div>
-                                                    <div class="facilities-item-wrap">
-                                                        <div class="feature-checkbox">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value="Air Conditioning" id="air-Conditioning">
-                                                                <label class="form-check-label" for="air-Conditioning">
-                                                                    Hosiptal
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <input type="text" class="form-control" placeholder="6.4 km">
+                                                </div>
+                                                <div class="col-lg-12 mb-3 mt-4">
+                                                    <h4 class="th-heading-sm">Floor Plan</h4>
+                                                    <div class="position-relative">
+                                                        <label for="" class="form-label">First Floor Image</label>
+                                                        <input type="file" class="filepond" name="filepond1" multiple data-max-file-size="3MB" data-max-files="1" />
                                                     </div>
-                                                    <div class="facilities-item-wrap">
-                                                        <div class="feature-checkbox">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value="Air Conditioning" id="air-Conditioning">
-                                                                <label class="form-check-label" for="air-Conditioning">
-                                                                    Hosiptal
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <input type="text" class="form-control" placeholder="6.4 km">
+                                                    <div class="position-relative">
+                                                        <label for="" class="form-label">Second Floor Image</label>
+                                                        <input type="file" class="filepond" name="filepond1" multiple data-max-file-size="3MB" data-max-files="1" />
                                                     </div>
-                                                    <div class="facilities-item-wrap">
-                                                        <div class="feature-checkbox">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value="Air Conditioning" id="air-Conditioning">
-                                                                <label class="form-check-label" for="air-Conditioning">
-                                                                    Hosiptal
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <input type="text" class="form-control" placeholder="6.4 km">
-                                                    </div>
-                                                    <div class="facilities-item-wrap">
-                                                        <div class="feature-checkbox">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value="Air Conditioning" id="air-Conditioning">
-                                                                <label class="form-check-label" for="air-Conditioning">
-                                                                    Hosiptal
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <input type="text" class="form-control" placeholder="6.4 km">
-                                                    </div>
-                                                    <div class="facilities-item-wrap">
-                                                        <div class="feature-checkbox">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value="Air Conditioning" id="air-Conditioning">
-                                                                <label class="form-check-label" for="air-Conditioning">
-                                                                    Hosiptal
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <input type="text" class="form-control" placeholder="6.4 km">
-                                                    </div>
-                                                    <div class="facilities-item-wrap">
-                                                        <div class="feature-checkbox">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value="Air Conditioning" id="air-Conditioning">
-                                                                <label class="form-check-label" for="air-Conditioning">
-                                                                    Hosiptal
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <input type="text" class="form-control" placeholder="6.4 km">
-                                                    </div>
-                                                    <div class="facilities-item-wrap">
-                                                        <div class="feature-checkbox">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value="Air Conditioning" id="air-Conditioning">
-                                                                <label class="form-check-label" for="air-Conditioning">
-                                                                    Hosiptal
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <input type="text" class="form-control" placeholder="6.4 km">
-                                                    </div>
-                                                    <div class="facilities-item-wrap">
-                                                        <div class="feature-checkbox">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value="Air Conditioning" id="air-Conditioning">
-                                                                <label class="form-check-label" for="air-Conditioning">
-                                                                    Hosiptal
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <input type="text" class="form-control" placeholder="6.4 km">
-                                                    </div>
-                                                    <div class="facilities-item-wrap">
-                                                        <div class="feature-checkbox">
-                                                            <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" value="Air Conditioning" id="air-Conditioning">
-                                                                <label class="form-check-label" for="air-Conditioning">
-                                                                    Hosiptal
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                        <input type="text" class="form-control" placeholder="6.4 km">
+                                                </div>
+                                                <div class="col-lg-12 mt-3">
+                                                    <div class="btn_group">
+                                                        <button type="submit" class="th-btn">Save Change</button>
+                                                        <button type="submit" class="th-btn th-btn-danger">Canel</button>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-12 mt-3">
-                                                <button type="submit" class="th-btn">Save Change</button>
-                                            </div>
-                                        </div>
-                                    </form>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
