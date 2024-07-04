@@ -16,7 +16,7 @@
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  z-index: 9999;
+  z-index: 999;
   -ms-overflow-style: none;
 }
 .th-admin-content{
@@ -475,38 +475,6 @@
   height: 100%;
   color: var(--th-primary-color);
 
-}
-/* ========= Custome Badge ========= */
-.badge{
-  border-radius: 17px;
-  display: inline-block;
-  font-size: 12px;
-  min-width: 74px;
-  padding: 10px 13px;
-  text-align: center;
-  border: 0;
-  color: #fff;
-  background-color: var(--th-primary-color);
-}
-.bg-orange{
-  background-color: rgba(255, 166, 0, 0.634);
-}
-.bg-orange{
-  background-color: rgba(137, 43, 226, 0.619);
-}
-.bg-yellow{
-  background-color: rgba(255, 255, 0, 0.637);
-  color: #000;
-}
-.bg-red{
-  background-color: rgba(255, 0, 0, 0.615);
-}
-.bg-gray{
-  background-color: rgba(196, 196, 196, 0.54);
-  color: #000;
-}
-.bg-primary{
-  background-color: var(--th-primary-color);
 }
 
 /*========= Action Dropdown ========= */
