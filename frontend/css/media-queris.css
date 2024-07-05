@@ -23,8 +23,11 @@
     }
 }
 @media only screen and (max-width:1400px){
-    .th-admin-wrapper.sidebar-close .th-admin-sidebar{
+    .th-admin-wrapper .th-admin-sidebar{
         left: -100%;
+        transition: all .3s ease;
+    }    .th-admin-wrapper.sidebar-close .th-admin-sidebar{
+        left: 0%;
         transition: all .3s ease;
     }
     .th-admin-wrapper.sidebar-close .th-admin-content{
@@ -67,5 +70,26 @@
     }
     .facilities-item-wrap{
         width: 100%;
+    }
+    .employer_notification-dropdown .profile-dropdown{
+        width: 320px;
+        right: -70px;
+    }
+    .profile-dropdown li a{
+        flex-direction: column;
+    }
+    .top-text-heading{
+        max-width: 100%;
+        font-size: 13px;
+    }
+    .top-text-light{
+        font-size: 12px;
+    }
+    .top-text-heading,
+    .top-text-light{
+        width: 100%;
+    }
+    .top-text-light{
+        text-align: end;
     }
 }

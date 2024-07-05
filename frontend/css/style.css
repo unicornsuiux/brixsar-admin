@@ -149,6 +149,12 @@
   white-space: nowrap;
 
 }
+.th-admin-wrapper.sidebar-close .toggle-sidebar{
+  background-color: var(--th-primary-color);
+}
+.th-admin-wrapper.sidebar-close .toggle-sidebar i{
+  color: #fff;
+}
 
 /* =============== Admin Header ============= */
 .th-admin-header{
