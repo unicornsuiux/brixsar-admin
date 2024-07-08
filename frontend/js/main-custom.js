@@ -257,14 +257,14 @@ chart.render();
 
 
 // Data table
-$(document).ready(function() {
-    $('#datatable-1').DataTable( 
-      {
-        responsive: true
-      } 
-    );
-  } 
-);
+// $(document).ready(function() {
+//     $('#datatable-1').DataTable( 
+//       {
+//         responsive: true
+//       } 
+//     );
+//   } 
+// );
 
 // action Dropdown
 $(document).ready(function() {

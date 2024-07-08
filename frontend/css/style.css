@@ -496,17 +496,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: auto;
   font-size: 20px;
   cursor: pointer;
 }
 .action-dropdown{
   visibility: hidden;
   opacity: 0;
-  transition: 0.2s all linear;
+  transition: 0.1s all ease;
+  min-width: 120px;
+  max-width: 170px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   position: absolute;
-  left: 0;
+  left: 0px;
   top: 24px;
   background: #fff;
   border: 0;
@@ -519,25 +520,27 @@
   width: 100%;
   padding: 12px 12px;
   text-align: left;
-  transform-origin: 0 0;
-  transform: scale(0);
 }
 .action-dropdown.active {
   visibility: visible;
   opacity: 1;
-  transform-origin: 100% 0px;
-  transform: scaleX(1) scaleY(1);
+  /* transform-origin: 100% 0px;
+  transform: scaleX(1) scaleY(1); */
 }
 .action-dropdown li{
   list-style: none;
-  padding: 3px 5px;
 }
 .action-dropdown li a{
   display: block;
+  padding: 3px 5px;
+  font-size: 12px;
 }
 .action-dropdown li:hover{
   background-color: #f4f4f4;
   border-radius: 4px;
+}
+td .action-dropdown{
+  left: -32px;
 }
 
 /*=========== th-box ==============*/
@@ -555,8 +558,7 @@
   padding: 20px; 
 }
 
-
-/* Checkbox Wrap */
+/*=========== Checkbox Wrap ==============*/
 .feature-inner-wrap{
   display: flex;
   flex-wrap: wrap;
@@ -580,4 +582,28 @@
 }
 .facilities-item-wrap input{
   width: 150px;
+}
+
+
+/*============= Sign In Page ============*/
+.page-wrapper{
+  min-height: 100vh;
+  background-color: #EEEEEE;
+}
+.authincation{
+  height: 100vh;
+}
+.authincation-content {
+  background: #fff;
+  box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
+  border-radius: 5px;
+}
+.authincation .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.auth-form{
+  padding: 50px 50px;
 }
