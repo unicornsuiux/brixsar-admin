@@ -14,33 +14,15 @@ document.querySelectorAll('input.filepond').forEach(inputElement => {
   FilePond.create(inputElement);
 });
 
-// HEADER SHIFT
-$(document).ready(function () {
-  var lastScroll = 5;
-  jQuery(document).ready(function ($) {
-    $(window).scroll(function () {
-      setTimeout(function () {
-        //gives 100ms to finish scrolling before doing a check
-        var scroll = $(window).scrollTop();
-        if (scroll > 5) {
-          $(".header").addClass("shift");
-        } else {
-          $(".header").removeClass("shift");
-        }
-        lastScroll = scroll;
-      }, 5);
-    });
-  });
-});
 
 // Bootstrap tool tip
 var tooltipTriggerList = [].slice.call(
   document.querySelectorAll('[data-bs-toggle="tooltip"]')
 );
+
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl);
 });
-
 
 $(document).ready(function() {
   // Function to handle level-1 submenu toggle
@@ -131,14 +113,14 @@ $(document).ready(function() {
 // BAR CHART
 var options = {
     series: [{
-    name: 'series1',
+    name: 'Sales',
     data: [31, 40, 28, 51, 42, 109, 100]
   }, {
-    name: 'series2',
+    name: 'Rental',
     data: [11, 32, 45, 32, 34, 52, 41]
   }],
     chart: {
-    height: 488,
+    height: 350,
     type: 'area'
   },
   dataLabels: {

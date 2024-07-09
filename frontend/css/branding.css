@@ -511,6 +511,11 @@ body::-webkit-scrollbar-thumb {
   color: #333;
 }
 /* TH-BTNS SIZES */
+.th-btn.sm {
+  padding: 5px 15px;
+  font-size: var(--th-font12);
+  font-weight: var(--th-fw-400);
+}
 .th-btn.md {
   padding: 8px 25px;
   font-size: var(--th-font17);
@@ -532,6 +537,9 @@ body::-webkit-scrollbar-thumb {
 }
 .round-50 {
   border-radius: 50% !important;
+}
+.round-0{
+  border-radius: 0 !important;
 }
 
 /* BTN OUTLINE */
@@ -1016,6 +1024,9 @@ body::-webkit-scrollbar-thumb {
 /* TEXT COLOR */
 .th-primary {
   color: var(--th-primary-color);
+}
+.th-dark{
+  color: var(--th-bc-dark-300);
 }
 /* TEXT TRUNCATE */
 .th-text-1 {
