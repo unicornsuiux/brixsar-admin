@@ -168,13 +168,13 @@
   display: flex;
   align-items: center;
   justify-content: end;
-  padding: 17px 10px 17px 14px;
+  padding: 16px 10px 16px 14px;
   border-radius: 0px;
 }
 .th-header-actions{
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 17px;
 }
 .toggle-sidebar{
   width: 40px;
@@ -182,7 +182,6 @@
   background-color: transparent;
   border-radius: 50%;
   cursor: pointer;
-  border: 1px solid #C3D4E9;
 }
 .toggle-sidebar i{
   color: #333;
@@ -191,32 +190,6 @@
   justify-content: center;
   height: 100%;
 }
-.employer_profile-dropdown, .employer_notification-dropdown{
-  position: relative;
-}
-.notification{
-  border: 1px solid #C3D4E9;
-  background-color: transparent;
-  position: relative;
-  height: 37px;
-  width: 37px;
-  border-radius: 50%;
-  padding: 10px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.notification::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: green;
-  border-radius: 50%;
-  top: -2px;
-  right: 3px;
-}
 .w-40-rounded{
   width: 40px;
   height: 40px;
@@ -224,119 +197,134 @@
   border-radius: 50%;
   cursor: pointer;
 }
-.employer_notification-dropdown .genral-icon{
-  cursor: pointer;
+.profile-dropdown .dropdown-toggle{
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
-.profile-dropdown{
-  background-color: #fff;
-  box-shadow: 0 0 45px 0 rgba(131, 23, 254, 0.06);
-  border-radius: 7px;
-  padding: 12px;
-  position: absolute;
-  right: 0;
-  top: 60px;
-  width: 200px;
-  max-width: 200px;
+.dropdown-toggle.no-arrow::after{
   display: none;
 }
-.employer_notification-dropdown .profile-dropdown{
-  top: 40px;
+.profile-dropdown .dropdown-menu.show{
+  top: 13px !important;
 }
-.profile-dropdown li{
-  background-color: #f4f4f4;
-  padding: 8px;
-  margin-bottom: 5px;
-  border-radius: 6px;
-  transition: all .3s ease-in-out;
-  list-style: none;
+.profile-img{
+  width: 45px;
+  height: 45px;
 }
-.profile-dropdown li:last-child{
-  margin-bottom: 0;
+.header-info{
+  text-align: right;
 }
-.profile-dropdown li a{
-  color: #333;
-  font-size: var(--theme-font16);
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-}
-.profile-dropdown li i{
-  color: #7D7D7D;
-}
-.profile-dropdown li:hover{
-  background-color: var(--th-bg-black);
-}
-.profile-dropdown li:hover a, .profile-dropdown li:hover i{
-  color: #fff;
-}
-.employer_profile-dropdown{
-  border: 1px solid #C3D4E9;
-  background-color: transparent;
-  position: relative;
-  height: 37px;
-  width: 37px;
-  border-radius: 50%;
-  padding: 10px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.employer_profile-dropdown-inner{
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  justify-content: space-between;
-  width: 100%;
-}
-.employer_profile-dropdown-inner p{
-  font-weight: normal;
-  font-size: 18px;
-  color: #000000;
+.header-info span{
+  font-weight: 600;
+  font-size: 15px;
+  line-height: unset;
+  font-family: var(--th-heading-family);
   min-width: 39px;
   max-width: 145px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  display: block !important;
 }
-.employer_profile-dropdown .profile-dropdown{
-  width: 300px;
-  max-width: 300px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 20px;
+.header-info p{
+  font-size: 12px;
+  color: #6c757d;
+  line-height: 1.4;
+  font-family: var(--th-body-family);
 }
-.employer_notification-dropdown .profile-dropdown{
-  width: 450px;
-  max-width: 450px;
+.icon-box{
+  width: 45px;
+  height: 45px;
+  position: relative;
+  color: var(--th-primary);
+  background: #EEEEEE;
+  border-radius: 0.75rem;
+  padding: 15px;
+  line-height: 1;
+}
+.notification-dropdown button i{
+  font-size: 17px;
+}
+.dropstart.notification-dropdown .dropdown-toggle::before{
+  display: none;
+}
+.dropstart.notification-dropdown .dropdown-menu{
+  min-width: 22rem;
+  top: 63px !important;
+  padding: 20px 24px;
   max-height: 400px;
   overflow-y: auto;
 }
-.profile-dropdown li a{
-  justify-content: space-between;
+.dropstart.notification-dropdown .dropdown-menu ul{
+  list-style: none;
 }
-.top-text-heading{
-  max-width: 240px;
+.timeline .media-body{
+  padding: 7px 0;
 }
-.greeting{
-  padding: 10px 30px 5px 30px;
+.timeline .media-body h6{
+  font-size: 20px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4 !important;
 }
-.profile-dropdown_name-area h2{
-  font-size: 24px;
-  line-height: 33px;
+.timeline .media-body small{
+  color: #333;
+  font-size: 12px;
 }
-.profile-dropdown_links{
-  background: #F5F6FA;
-  padding: 20px 30px 20px 30px;
-  border-bottom: 1px solid #ddd;
-  border-top: 1px solid #ddd;
+.animated-circle span{
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--th-primary-color);
+  border-radius: 50%;
+  z-index: 1;
 }
-.sign-out{
-  padding: 16px 30px 10px 30px;
+.animated-circle span::after{
+  content: '';
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: -.2rem;
+  background-color: #FF507A;
+  margin: auto;
+  -webkit-transform: scale(0.3);
+  transform: scale(0.3);
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  -webkit-animation: pulse-me 3s linear infinite;
+  animation: pulse-me 3s linear infinite;
 }
-
+@keyframes pulse-me {
+  0% {
+    -webkit-transform: scale(0.3);
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+      opacity: 0.1;
+  }
+  70% {
+      opacity: 0.09;
+  }
+  100% {
+      -webkit-transform: scale(3);
+      transform: scale(3);
+      opacity: 0;
+  }
+}
+.expand-screen{
+  cursor: pointer;
+}
+.expand-screen.active{
+  background-color: var(--th-primary-color);
+}
+.expand-screen.active i{
+  color: #fff;
+}
 /* ============  th-admin-block ======== */
 .th-admin-content-inner{
   padding: 20px 20px;
@@ -356,9 +344,6 @@
   font-size: 12px;
   margin: 0;
   color: #6c757d;
-}
-.th-admin-block.chart-block{
-  background-color: #fff;
 }
 .th-admin-block-inner{
   display: flex;

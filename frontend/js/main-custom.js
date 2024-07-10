@@ -9,11 +9,15 @@ FilePond.registerPlugin(
   FilePondPluginImagePreview
 );
 
-// Select all file inputs with the class 'filepond' and turn them into ponds
-document.querySelectorAll('input.filepond').forEach(inputElement => {
-  FilePond.create(inputElement);
+document.querySelector('.expand-screen').addEventListener('click', function() {
+  if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(err => {
+          console.log(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+      });
+  } else {
+      document.exitFullscreen();
+  }
 });
-
 
 // Bootstrap tool tip
 var tooltipTriggerList = [].slice.call(
@@ -65,49 +69,46 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-  $(document).click(function(event) {
-    if (!$(event.target).closest('.employer_notification-dropdown, .employer_profile-dropdown').length) {
-      $('.profile-dropdown').hide();
-    }
+  // Check localStorage and set the initial state
+  if (localStorage.getItem('isFullscreen') === 'true') {
+      try {
+          document.documentElement.requestFullscreen().catch(err => {
+              console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+          });
+          $('.expand-screen').addClass('active');
+      } catch (err) {
+          console.error(`Error: ${err.message} (${err.name})`);
+      }
+  }
+
+  $('.expand-screen').on('click', function() {
+      if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen().then(() => {
+              $(this).addClass('active');
+              localStorage.setItem('isFullscreen', 'true');
+          }).catch(err => {
+              console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+          });
+      } else {
+          if (document.exitFullscreen) {
+              document.exitFullscreen().then(() => {
+                  $(this).removeClass('active');
+                  localStorage.setItem('isFullscreen', 'false');
+              }).catch(err => {
+                  console.error(`Error attempting to exit full-screen mode: ${err.message} (${err.name})`);
+              });
+          }
+      }
   });
 
-  $('#open_profile_notification').click(function() {
-    var profileDropdown = $('.employer_notification-dropdown .profile-dropdown');
-    var profileDropdownVisible = profileDropdown.is(':visible');
-    var profileDropdownOther = $('.employer_profile-dropdown .profile-dropdown');
-
-    if (profileDropdownVisible) {
-      profileDropdown.hide();
-    } else {
-      profileDropdown.show();
-      profileDropdownOther.hide();
-    }
-  });
-
-  $('#open_profile_dropdown').click(function() {
-    var profileDropdown = $('.employer_profile-dropdown .profile-dropdown');
-    var profileDropdownVisible = profileDropdown.is(':visible');
-    var profileDropdownOther = $('.employer_notification-dropdown .profile-dropdown');
-
-    if (profileDropdownVisible) {
-      profileDropdown.hide();
-    } else {
-      profileDropdown.show();
-      profileDropdownOther.hide();
-    }
-  });
-
-  // Close dropdown when the button is clicked again
-  $('#open_profile_notification, #open_profile_dropdown').click(function() {
-    var profileDropdown = $(this).siblings('.profile-dropdown');
-    var profileDropdownVisible = profileDropdown.is(':visible');
-
-    if (profileDropdownVisible) {
-      profileDropdown.hide();
-    }
+  // Listen for fullscreen change events to update localStorage
+  document.addEventListener('fullscreenchange', function() {
+      if (!document.fullscreenElement) {
+          $('.expand-screen').removeClass('active');
+          localStorage.setItem('isFullscreen', 'false');
+      }
   });
 });
-
 
 
 // BAR CHART
