@@ -8,17 +8,10 @@ FilePond.registerPlugin(
   // previews dropped images
   FilePondPluginImagePreview
 );
-
-document.querySelector('.expand-screen').addEventListener('click', function() {
-  if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen().catch(err => {
-          console.log(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-      });
-  } else {
-      document.exitFullscreen();
-  }
+// Select all file inputs with the class 'filepond' and turn them into ponds
+document.querySelectorAll('input.filepond').forEach(inputElement => {
+  FilePond.create(inputElement);
 });
-
 // Bootstrap tool tip
 var tooltipTriggerList = [].slice.call(
   document.querySelectorAll('[data-bs-toggle="tooltip"]')
@@ -68,47 +61,66 @@ $(document).ready(function() {
   });
 });
 
+
+
 $(document).ready(function() {
-  // Check localStorage and set the initial state
-  if (localStorage.getItem('isFullscreen') === 'true') {
-      try {
+  function enterFullScreen() {
+      if (document.documentElement.requestFullscreen) {
           document.documentElement.requestFullscreen().catch(err => {
               console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
           });
-          $('.expand-screen').addClass('active');
-      } catch (err) {
-          console.error(`Error: ${err.message} (${err.name})`);
+      } else if (document.documentElement.mozRequestFullScreen) { // Firefox
+          document.documentElement.mozRequestFullScreen();
+      } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
+          document.documentElement.webkitRequestFullscreen();
+      } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+          document.documentElement.msRequestFullscreen();
       }
+      $('.expand-screen').addClass('active');
+  }
+
+  function exitFullScreen() {
+      if (document.exitFullscreen) {
+          document.exitFullscreen().catch(err => {
+              console.error(`Error attempting to exit full-screen mode: ${err.message} (${err.name})`);
+          });
+      } else if (document.mozCancelFullScreen) { // Firefox
+          document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) { // Chrome, Safari and Opera
+          document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) { // IE/Edge
+          document.msExitFullscreen();
+      }
+      $('.expand-screen').removeClass('active');
+  }
+
+  // Check sessionStorage and set the initial state
+  if (sessionStorage.getItem('isFullscreen') === 'true') {
+      enterFullScreen();
   }
 
   $('.expand-screen').on('click', function() {
-      if (!document.fullscreenElement) {
-          document.documentElement.requestFullscreen().then(() => {
-              $(this).addClass('active');
-              localStorage.setItem('isFullscreen', 'true');
-          }).catch(err => {
-              console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-          });
+      if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+          enterFullScreen();
+          sessionStorage.setItem('isFullscreen', 'true');
       } else {
-          if (document.exitFullscreen) {
-              document.exitFullscreen().then(() => {
-                  $(this).removeClass('active');
-                  localStorage.setItem('isFullscreen', 'false');
-              }).catch(err => {
-                  console.error(`Error attempting to exit full-screen mode: ${err.message} (${err.name})`);
-              });
-          }
+          exitFullScreen();
+          sessionStorage.setItem('isFullscreen', 'false');
       }
   });
 
-  // Listen for fullscreen change events to update localStorage
+  // Listen for fullscreen change events to update sessionStorage
   document.addEventListener('fullscreenchange', function() {
-      if (!document.fullscreenElement) {
+      if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
           $('.expand-screen').removeClass('active');
-          localStorage.setItem('isFullscreen', 'false');
+          sessionStorage.setItem('isFullscreen', 'false');
+      } else {
+          $('.expand-screen').addClass('active');
+          sessionStorage.setItem('isFullscreen', 'true');
       }
   });
 });
+
 
 
 // BAR CHART
@@ -152,91 +164,91 @@ var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
 
 // DOUNT CHART
-var options = {
-  series: [44, 55, 41, 17, 15],
-  chart: {
-    width: 360,
-    type: 'donut',
-  },
-  plotOptions: {
-    pie: {
-      startAngle: -90,
-      endAngle: 270
-    }
-  },
-  dataLabels: {
-    enabled: false
-  },
-  fill: {
-    type: 'gradient',
-  },
-  legend: {
-    formatter: function(val, opts) {
-      return val + " - " + opts.w.globals.series[opts.seriesIndex]
-    }
-  },
-  responsive: [
-    {
-      breakpoint: 1900,
-      options: {
-        chart: {
-          width: 320
-        },
-        legend: {
-          position: 'bottom'
-        }
-      }
-    },
-    {
-      breakpoint: 1350, // New breakpoint
-      options: {
-        chart: {
-          width: 230
-        },
-        legend: {
-          position: 'bottom'
-        }
-      }
-    },
-    {
-      breakpoint: 1200, // New breakpoint
-      options: {
-        chart: {
-          width: 380
-        },
-        legend: {
-          position: 'bottom'
-        }
-      }
-    },
-    {
-      breakpoint: 900, // New breakpoint
-      options: {
-        chart: {
-          width: 280
-        },
-        legend: {
-          position: 'bottom'
-        }
-      }
-    },
-    {
-      breakpoint: 400, // New breakpoint
-      options: {
-        chart: {
-          width: 250,
-          height: 300
-        },
-        legend: {
-          position: 'bottom'
-        }
-      }
-    }
-  ]
-};
+// var options = {
+//   series: [44, 55, 41, 17, 15],
+//   chart: {
+//     width: 360,
+//     type: 'donut',
+//   },
+//   plotOptions: {
+//     pie: {
+//       startAngle: -90,
+//       endAngle: 270
+//     }
+//   },
+//   dataLabels: {
+//     enabled: false
+//   },
+//   fill: {
+//     type: 'gradient',
+//   },
+//   legend: {
+//     formatter: function(val, opts) {
+//       return val + " - " + opts.w.globals.series[opts.seriesIndex]
+//     }
+//   },
+//   responsive: [
+//     {
+//       breakpoint: 1900,
+//       options: {
+//         chart: {
+//           width: 320
+//         },
+//         legend: {
+//           position: 'bottom'
+//         }
+//       }
+//     },
+//     {
+//       breakpoint: 1350, // New breakpoint
+//       options: {
+//         chart: {
+//           width: 230
+//         },
+//         legend: {
+//           position: 'bottom'
+//         }
+//       }
+//     },
+//     {
+//       breakpoint: 1200, // New breakpoint
+//       options: {
+//         chart: {
+//           width: 380
+//         },
+//         legend: {
+//           position: 'bottom'
+//         }
+//       }
+//     },
+//     {
+//       breakpoint: 900, // New breakpoint
+//       options: {
+//         chart: {
+//           width: 280
+//         },
+//         legend: {
+//           position: 'bottom'
+//         }
+//       }
+//     },
+//     {
+//       breakpoint: 400, // New breakpoint
+//       options: {
+//         chart: {
+//           width: 250,
+//           height: 300
+//         },
+//         legend: {
+//           position: 'bottom'
+//         }
+//       }
+//     }
+//   ]
+// };
 
-var chart = new ApexCharts(document.querySelector("#dount"), options);
-chart.render();
+// var chart = new ApexCharts(document.querySelector("#dount"), options);
+// chart.render();
 
 
 // Data table

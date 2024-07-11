@@ -24,7 +24,7 @@
 
   /*=============== COLOR DECLARATION ===============*/
   --th-bg-white: #ffffff;
-  --th-bg-light: hsla(8, 79%, 62%, 0.05);
+  --th-bg-light: #f4f4f4;
   --th-bg-black: #222121;
   --th-primary-color: #ef32a6;
   --th-secondary-color: #737373;
@@ -36,6 +36,12 @@
   --th-sidebar-text-hover: #2e37a4;
   --th-color-10: #7c81ff;
   --wdtBorderColorRgb: 0, 0, 0;
+
+  --th-orange-color:#fca311;
+  --th-yellow-color:#A2D729;
+  --th-green-color:#08da67;
+  --th-blue-color:#1B5299;
+  --th-gray-color:#ccc5b9;
 
   /*=============== FONT WEIGHT DECLARATION ===============*/
   --th-fw-normal: normal;
@@ -576,28 +582,28 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--th-primary-color);
 }
 .th-btn-outline.outline-orange{
-  color: #fca311;
-  border: 1px solid #fca311;
+  color: var(--th-orange-color);
+  border: 1px solid var(--th-orange-color);
 }
 .th-btn-outline.outline-orange:hover{
   color: #fff;
-  background-color: #fca311;
+  background-color: var(--th-orange-color);
 }
 .th-btn-outline.outline-blue{
-  color: #1B5299;
-  border: 1px solid #1B5299;
+  color: var(--th-blue-color);
+  border: 1px solid var(--th-blue-color);
 }
 .th-btn-outline.outline-blue:hover{
   color: #fff;
-  background-color:#1B5299;
+  background-color:var(--th-blue-color);
 }
 .th-btn-outline.outline-yellow{
-  color: #A2D729;
-  border: 1px solid #A2D729;
+  color: var(--th-yellow-color);
+  border: 1px solid var(--th-yellow-color);
 }
 .th-btn-outline.outline-yellow:hover{
   color: #fff;
-  background-color: #A2D729;
+  background-color: var(--th-yellow-color);
 }
 .th-btn-outline.outline-red{
   color: #c1121f;
@@ -609,19 +615,19 @@ body::-webkit-scrollbar-thumb {
 }
 .th-btn-outline.outline-gray{
   color: #333;
-  border: 1px solid #ccc5b9;
+  border: 1px solid var(--th-gray-color);
 }
 .th-btn-outline.outline-gray:hover{
   color: #333;
-  background-color: #ccc5b9;
+  background-color: var(--th-gray-color);
 }
 .th-btn-outline.outline-success{
-  color: #08da67;
-  border: 1px solid #08da67;
+  color: var(--th-green-color);
+  border: 1px solid var(--th-green-color);
 }
 .th-btn-outline.outline-success:hover{
   color: #fff;
-  background-color: #08da67;
+  background-color: var(--th-green-color);
 }
 .th-btn-outline.outline-dark{
   border: 1px solid #003934;
@@ -662,27 +668,27 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--th-primary-color);
 }
 .bg-orange{
-  background-color: #fca311;
+  background-color: var(--th-orange-color);
 }
 .bg-blue{
-  background-color: #1B5299;
+  background-color: var(--th-blue-color);
 }
 .bg-yellow{
-  background-color: #A2D729;
+  background-color: var(--th-yellow-color);
   color: #fff;
 }
 .bg-red{
   background-color: #dc1220;
 }
 .bg-gray{
-  background-color: #ccc5b9;
+  background-color: var(--th-gray-color);
   color: #513434;
 }
 .bg-primary{
   background-color: var(--th-primary-color);
 }
 .bg-success{
-  background-color: #08da67 !important;
+  background-color: var(--th-green-color) !important;
 }
 .bg-dark{
   background-color: #003934 !important;
@@ -703,6 +709,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: var(--th-fw-600);
   border-radius: var(--th-radius-5);
   padding: 0 7px;
+  display: inline-block;
 }
 .tag.bg-light-blue{
   background-color: #efd9f9;
@@ -735,6 +742,10 @@ body::-webkit-scrollbar-thumb {
 .tag.bg-dark{
   background-color: #443e3e !important;
   color: #fafafa;
+}
+.tag.bg-orange{
+  background-color: rgb(255 165 0 / 33%) !important;
+  color: #7b9428 !important;
 }
 
 
@@ -1054,7 +1065,7 @@ body::-webkit-scrollbar-thumb {
 /* ========= ACCORDION ========== */
 
 .th-accordion .accordion-item {
-  border: 1px solid var(--th-bc-light-300);
+  border: 1px solid var(--th-bg-light);
   margin-bottom: 25px;
   border-radius: 8px;
   overflow: hidden;
@@ -1080,7 +1091,7 @@ body::-webkit-scrollbar-thumb {
   padding-inline-end: 8px;
   justify-content: space-between;
   text-align: left;
-  background: var(--th-bg-white);
+  background: var(--th-bg-light);
   text-transform: capitalize;
   position: relative;
   padding-inline-end: 60px;
@@ -1125,6 +1136,34 @@ body::-webkit-scrollbar-thumb {
 .th-accordion .accordion-body p {
   font-size: 16px;
 }
+
+/*======== Accordion variations ========*/
+.th-accordion.accordion-dark .accordion-button:not(.collapsed) {
+  background-color: var(--th-bg-black);
+  color: var(--th-bg-white);
+  box-shadow: none;
+}
+.th-accordion.accordion-orange .accordion-button:not(.collapsed) {
+  background-color: var(--th-orange-color);
+  color: var(--th-bg-white);
+}
+.th-accordion.accordion-yellow .accordion-button:not(.collapsed) {
+  background-color: var(--th-yellow-color);
+  color: var(--th-bg-white);
+}
+.th-accordion.accordion-green .accordion-button:not(.collapsed) {
+  background-color: var(--th-green-color);
+  color: var(--th-bg-white);
+}
+.th-accordion.accordion-blue .accordion-button:not(.collapsed) {
+  background-color: var(--th-blue-color);
+  color: var(--th-bg-white);
+}
+.th-accordion.accordion-gray .accordion-button:not(.collapsed) {
+  background-color: var(--th-gray-color);
+  color: var(--th-bg-white);
+}
+
 
 /* Max Width */
 .mx-w-600 {
@@ -1229,7 +1268,7 @@ body::-webkit-scrollbar-thumb {
   color: #FF9F0F;
 }
 .text-orange{
-  color: #fca311;
+  color: var(--th-orange-color);
 }
 .text-dark{
   color: #333;
@@ -1674,7 +1713,7 @@ div.dt-container select.dt-input{
   background: #e85e6c;
 }
 .modal-success .modal-header{
-  background-color: #08da67;
+  background-color: var(--th-green-color);
 }
 .modal-error .icon-box,
 .modal-success .icon-box {

@@ -3,7 +3,7 @@ document.write('<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/d
 document.write('<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>');
 document.write('<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>');
 document.write('<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>');
-// document.write('<script src="https://cdn.datatables.net/2.0.8/js/dataTables.js" crossorigin="anonymous"></script>');
+document.write('<script src="https://cdn.datatables.net/2.0.8/js/dataTables.js" crossorigin="anonymous"></script>');
 document.write('<script language=javascript src="https://unpkg.com/filepond-plugin-file-encode/dist/filepond-plugin-file-encode.min.js"></script>');
 document.write('<script language=javascript src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.min.js"></script>');
 document.write('<script language=javascript src="https://unpkg.com/filepond-plugin-image-exif-orientation/dist/filepond-plugin-image-exif-orientation.min.js"></script>');
