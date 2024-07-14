@@ -19,8 +19,8 @@
 /*----------------------------------------*/
 :root {
   /*=============== THEME FONT FAMILY DECLARATION ===============*/
-  --th-body-family: "Open Sans", sans-serif;
-  --th-heading-family: "Poppins", sans-serif;
+  --th-body-family: "Inter", sans-serif;
+  --th-heading-family: "Inter", sans-serif;
 
   /*=============== COLOR DECLARATION ===============*/
   --th-bg-white: #ffffff;
@@ -43,6 +43,9 @@
   --th-blue-color:#1B5299;
   --th-gray-color:#ccc5b9;
 
+  --th-sidebar-color:#fff;
+  --th-sidebar-heading-color: #ef32a6;
+  --th-sidebar-link-hover-bg: rgba(255, 255, 255, 0.12);
   /*=============== FONT WEIGHT DECLARATION ===============*/
   --th-fw-normal: normal;
   --th-fw-200: 200;
@@ -55,6 +58,7 @@
   --th-fw-900: 900;
 
   /*=============== FONT SIZE DECLARATION ===============*/
+  --th-sidebar-fs: 14px;
   --th-fs-body: 16px;
   --th-fs-p: 16px;
   --th-fs-h1: 65px;
@@ -530,7 +534,7 @@ body::-webkit-scrollbar-thumb {
 .th-btn.lg {
   padding: 8px 30px;
   font-size: var(--th-font18);
-  font-weight: var(--th-fw-600);
+  font-weight: var(--th-fw-500);
 }
 .th-btn.full {
   height: 75px;

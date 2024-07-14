@@ -8,6 +8,7 @@
     .th-admin-wrapper.sidebar-close .th-admin-sidebar .th-admin-brand-logo p{
         opacity: 0;
         visibility: hidden;
+        display: none;
     }
     .th-admin-wrapper.sidebar-close .menu-block h5{
         display: none;
