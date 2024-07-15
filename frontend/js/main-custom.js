@@ -61,6 +61,17 @@ $(document).ready(function() {
   });
 });
 
+// Select 2 JS
+$(document).ready(function () {
+  $(".js-select2").each(function () {
+    var placeholder = $(this).data("placeholder");
+    $(this).select2({
+      placeholder: placeholder,
+      allowClear: true, // Allows the user to clear the selection
+    });
+  });
+});
+
 
 
 $(document).ready(function() {

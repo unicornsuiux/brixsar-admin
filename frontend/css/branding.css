@@ -230,10 +230,14 @@ input {
   -moz-appearance: none;
   appearance: none;
 }
+input[type="checkbox"],
+input[type="radio"]{
+  padding: 0;
+}
 input:focus {
   box-shadow: none;
 }
-.form-check input[type="checkbox"] {
+input[type="checkbox"] {
   height: 19px !important;
   width: 19px !important;
   border: 1px solid #ddd !important;
@@ -243,16 +247,24 @@ input:focus {
   left: 0px;
   padding: 0;
 }
-.form-check-input:checked {
+input[type="checkbox"]:checked {
   background-color: var(--th-primary-color);
   box-shadow: none;
 }
-.form-check-input:focus {
+input[type="checkbox"]:focus {
   box-shadow: none !important;
 }
 .form-select:focus {
   box-shadow: none;
   border: 1px solid var(--th-primary-color);
+}
+.form-check-input:checked{
+  background-color: var(--th-primary-color);
+  border-color: var(--th-primary-color);
+}
+.form-check-input:focus{
+  outline: 0;
+  box-shadow: none;
 }
 .form-label,
 label {
@@ -260,6 +272,7 @@ label {
   color: var(--th-label-color);
   font-size: 14px !important;
   font-family: var(--th-heading-family);
+  display: block;
 }
 .form-control,
 .form-select {
@@ -283,17 +296,6 @@ textarea.form-control {
 .form-control::placeholder{
   font-size: 13px;
 }
-.input-group-text {
-  width: 80px;
-  justify-content: center;
-  border: 0;
-  background-color: #f4f4f4;
-  border-radius: 4px 0 0 4px;
-}
-.input-group-text i {
-  font-size: 24px;
-  color: var(--th-primary-color);
-}
 .input-group .form-floating {
   width: calc(100% - 80px);
 }
@@ -314,6 +316,9 @@ textarea.form-control {
 }
 .form-floating > .form-control:focus ~ label {
   transform: scale(0.85) translateY(-0.9rem) translateX(0.15rem);
+}
+.form-select option:hover{
+  background-color: red;
 }
 a:focus,
 button:focus {

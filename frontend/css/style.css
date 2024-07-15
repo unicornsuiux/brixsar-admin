@@ -936,3 +936,22 @@ td .action-dropdown {
 .auth-form {
   padding: 50px 50px;
 }
+/*============ Select 2 Options ============*/
+.select2-container .select2-selection--single{
+  height: 40px;
+}
+.select2-container--default .select2-selection--single{
+  border-radius: var(--th-radius-10);
+  border: 1px solid #ddd;
+  font-size: var(--th-font14);
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+  padding: 5px 5px 6px 10px;
+}
+.select2-container--default .select2-selection--single .select2-selection__clear,
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+  height: 100%;
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable{
+  background-color: var(--th-primary-color);
+}
