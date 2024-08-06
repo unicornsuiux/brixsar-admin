@@ -135,142 +135,81 @@ $(document).ready(function() {
 
 
 // BAR CHART
-var options = {
-    series: [{
-    name: 'Sales',
-    data: [31, 40, 28, 51, 42, 109, 100]
-  }, {
-    name: 'Rental',
-    data: [11, 32, 45, 32, 34, 52, 41]
-  }],
-    chart: {
-    height: 350,
-    type: 'area'
-  },
-  dataLabels: {
-    enabled: false
-  },
-  stroke: {
-    curve: 'smooth'
-  },
-  xaxis: {
-    type: 'datetime',
-    categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
-  },
-  tooltip: {
-    x: {
-      format: 'dd/MM/yy HH:mm'
-    },
-  },
-  responsive: [{
-    breakpoint: 1200,
-    options: {
-      chart: {
-        height: 288,
-      }
-    }
-  }]
-};
-var chart = new ApexCharts(document.querySelector("#chart"), options);
-chart.render();
-
-// DOUNT CHART
 // var options = {
-//   series: [44, 55, 41, 17, 15],
-//   chart: {
-//     width: 360,
-//     type: 'donut',
-//   },
-//   plotOptions: {
-//     pie: {
-//       startAngle: -90,
-//       endAngle: 270
-//     }
+//     series: [{
+//     name: 'Sales',
+//     data: [31, 40, 28, 51, 42, 109, 100]
+//   }, {
+//     name: 'Rental',
+//     data: [11, 32, 45, 32, 34, 52, 41]
+//   }],
+//     chart: {
+//     height: 350,
+//     type: 'area'
 //   },
 //   dataLabels: {
 //     enabled: false
 //   },
-//   fill: {
-//     type: 'gradient',
+//   stroke: {
+//     curve: 'smooth'
 //   },
-//   legend: {
-//     formatter: function(val, opts) {
-//       return val + " - " + opts.w.globals.series[opts.seriesIndex]
-//     }
+//   xaxis: {
+//     type: 'datetime',
+//     categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
 //   },
-//   responsive: [
-//     {
-//       breakpoint: 1900,
-//       options: {
-//         chart: {
-//           width: 320
-//         },
-//         legend: {
-//           position: 'bottom'
-//         }
-//       }
+//   tooltip: {
+//     x: {
+//       format: 'dd/MM/yy HH:mm'
 //     },
-//     {
-//       breakpoint: 1350, // New breakpoint
-//       options: {
-//         chart: {
-//           width: 230
-//         },
-//         legend: {
-//           position: 'bottom'
-//         }
-//       }
-//     },
-//     {
-//       breakpoint: 1200, // New breakpoint
-//       options: {
-//         chart: {
-//           width: 380
-//         },
-//         legend: {
-//           position: 'bottom'
-//         }
-//       }
-//     },
-//     {
-//       breakpoint: 900, // New breakpoint
-//       options: {
-//         chart: {
-//           width: 280
-//         },
-//         legend: {
-//           position: 'bottom'
-//         }
-//       }
-//     },
-//     {
-//       breakpoint: 400, // New breakpoint
-//       options: {
-//         chart: {
-//           width: 250,
-//           height: 300
-//         },
-//         legend: {
-//           position: 'bottom'
-//         }
+//   },
+//   responsive: [{
+//     breakpoint: 1200,
+//     options: {
+//       chart: {
+//         height: 288,
 //       }
 //     }
-//   ]
+//   }]
 // };
-
-// var chart = new ApexCharts(document.querySelector("#dount"), options);
+// var chart = new ApexCharts(document.querySelector("#chart"), options);
 // chart.render();
 
+var options = {
+  series: [{
+      name: 'Active',
+      data: [10, 20, 30, 40, 50]
+  }, {
+      name: 'In-Active',
+      data: [11, 32, 45, 32, 34]
+  }],
+  chart: {
+    height: 350,
+      type: 'area'
+  },
+  colors: ['#FE2C55', '#2E2E2E'], // Specify colors for each series
+  dataLabels: {
+      enabled: false
+  },
+  stroke: {
+      curve: 'smooth'
+  },
+  xaxis: {
+      type: 'category',
+      categories: ["2015", "2016", "2017", "2018", "2019", "2020"]
+  },
+  yaxis: {
+      min: 0,
+      max: 50
+  },
+  tooltip: {
+      x: {
+      format: 'dd/MM/yy HH:mm'
+      },
+  },
+};
 
-// Data table
-// $(document).ready(function() {
-//     $('#datatable-1').DataTable( 
-//       {
-//         responsive: true
-//       } 
-//     );
-//   } 
-// );
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
 
 // action Dropdown
 $(document).ready(function() {

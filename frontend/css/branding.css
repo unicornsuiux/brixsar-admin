@@ -1611,6 +1611,7 @@ div.dt-container .dt-paging .dt-paging-button:hover{
 }
 
 
+
 /**
  * FilePond Custom Styles
  */
@@ -1780,4 +1781,16 @@ div.dt-container select.dt-input{
   font-family: var(--th-heading-family);
   font-weight: 600;
   font-size: 14px;
+}
+
+
+/* count */
+.count{
+  width: max-content;
+  padding: 4px;
+  font-size: 9px;
+  font-weight: 400;
+  color: #fff;
+  border-radius: 2px;
+  background-color: var(--th-primary-color);
 }
